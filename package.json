@@ -1,0 +1,46 @@
+{
+  "name": "nrel",
+  "version": "0.0.1",
+  "description": "having fun with NREL API",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "node server.js",
+    "build": "next build",
+    "release": "cross-env NODE_ENV=production next bild",
+    "start": "cross-env NODE_ENV=production node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonbryant84/nrel.git"
+  },
+  "keywords": [
+    "nrel",
+    "renewable"
+  ],
+  "engines": {
+    "node": "14.8.0"
+  },
+  "author": "Jason Bryant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasonbryant84/nrel/issues"
+  },
+  "homepage": "https://github.com/jasonbryant84/nrel#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "d3": "^6.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "next": "^9.5.3",
+    "node-fetch": "^2.6.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "spdy": "^4.0.2",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2"
+  }
+}
