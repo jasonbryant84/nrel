@@ -9,7 +9,7 @@ const next = require('next'),
     fs = require('fs'),
     url = require('url')
 
-const port = parseInt(process.env.PORT, 10) || 3000,
+const port = process.env.PORT || 3000,
     dev = process.env.NODE_ENV !== 'production',
     nrelAPIkey = process.env.NREL_API_KEY,
     solarURL = process.env.NREL_SOLAR_RESOURCE_DATA_URL

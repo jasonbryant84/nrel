@@ -45,7 +45,7 @@ export default function Index() {
             }
         }
 
-        var url = new URL('https://localhost:3000/nrel')
+        var url = new URL(`${window.location.href}nrel`)
         url.search = new URLSearchParams({ lat, lon })
 
         fetch(url)
