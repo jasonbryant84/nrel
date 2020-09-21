@@ -80,13 +80,18 @@ app.prepare().then(() => {
         return handle(req, res)
     })
 
-    // spdy setup
-    spdy.createServer(options(), expressApp).listen(port, error => {
-        if (error) {
-          console.error(error)
-          return process.exit(1)
-        } else {
-          console.log(`HTTP/2 server listening on port: ${port}`)
-        }
-    })
+    expressApp.listen(port, err => {
+        if (err) throw err
+        console.log('> Ready on http://localhost:' + port)
+      })
+
+    // spdy setup http2
+    // spdy.createServer(options(), expressApp).listen(port, error => {
+    //     if (error) {
+    //       console.error(error)
+    //       return process.exit(1)
+    //     } else {
+    //       console.log(`HTTP/2 server listening on port: ${port}`)
+    //     }
+    // })
 })
